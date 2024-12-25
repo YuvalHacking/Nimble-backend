@@ -84,7 +84,7 @@ export class AnalyticsService {
     try {
       let query = this.invoiceRepository
         .createQueryBuilder('invoice')
-        .select("TO_CHAR(invoice.due_date, 'DD/MM/YYYY')", 'formattedDate')
+        .select("invoice.due_date")
         .addSelect('COUNT(invoice.id)', 'value')
         .innerJoin(InvoiceStatus, 'status', 'invoice.status_id = status.id')
         .where('status.name = :status', { status: InvoiceStatusEnum.OVERDUE });
@@ -92,14 +92,14 @@ export class AnalyticsService {
       query = applyInvoiceFilters(query, startDate, endDate, supplierIds);
 
       query
-        .groupBy("TO_CHAR(invoice.due_date, 'DD/MM/YYYY')")
-        .orderBy("TO_CHAR(invoice.due_date, 'DD/MM/YYYY')");
+        .groupBy("invoice.due_date")
+        .orderBy("invoice.due_date");
 
       const result = await query.getRawMany();
       this.logger.log('Overdue invoices trend fetched successfully');
 
       return result.map((row) => ({
-        name: row.formattedDate,
+        name: row.invoice_due_date.toLocaleDateString('en-GB'),
         value: row.value,
       }));
     } catch (err) {
