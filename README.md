@@ -136,6 +136,7 @@ Before you can run the backend application, make sure you have the following ins
 - **Node.js**: Version 20 or higher.
 - **npm**: Node's package manager, which comes bundled with Node.js.
 - **Docker**: Docker installed and **running**
+- **pgAdmin** (optional but recommended)
 
 ## Setup
 
