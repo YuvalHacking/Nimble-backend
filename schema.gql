@@ -1,0 +1,64 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ChartData {
+  name: String!
+  value: Float!
+}
+
+type Currency {
+  id: Int!
+  name: String!
+}
+
+type InvoiceStatus {
+  id: Int!
+  name: String!
+}
+
+type MetricDto {
+  amount: Int!
+  difference: Int!
+}
+
+type Mutation {
+  uploadCSV(file: Upload!): Boolean!
+}
+
+type Query {
+  getAmountsByStatus(endDate: String, startDate: String, supplierIds: [String!]): [ChartData!]!
+  getCustomerAnalysis(endDate: String, startDate: String, statusId: Int, supplierIds: [String!]): [ChartData!]!
+  getMonthlyTotals(endDate: String, startDate: String, statusId: Int, supplierIds: [String!]): [ChartData!]!
+  getOverdueTrend(endDate: String, startDate: String, supplierIds: [String!]): [ChartData!]!
+  getWeeklyMetrics: WeeklyMetricsDto!
+  invoiceStatuses: [InvoiceStatus!]!
+  suppliers: [Supplier!]!
+}
+
+type Supplier {
+  address: String!
+  bank_account_number: Float!
+  bank_branch_code: String!
+  bank_code: String!
+  city: String!
+  company_name: String!
+  contact_name: String!
+  country: String!
+  email: String!
+  external_id: String
+  internal_id: String!
+  phone: String!
+  status: String!
+  stock_value: Float!
+  withholding_tax: Float!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+type WeeklyMetricsDto {
+  earnings: MetricDto!
+  invoices: MetricDto!
+  overdue: MetricDto!
+}

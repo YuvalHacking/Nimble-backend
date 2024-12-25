@@ -1,0 +1,10 @@
+invoice_id,invoice_date,invoice_due_date,invoice_cost,invoice_currency,invoice_status,supplier_internal_id,supplier_external_id,supplier_company_name,supplier_address,supplier_city,supplier_country,supplier_contact_name,supplier_phone,supplier_email,supplier_bank_code,supplier_bank_branch_code,supplier_bank_account_number,supplier_status,supplier_stock_value,supplier_withholding_tax
+INV001,28/12/2024,20/02/2025,4490.19,EUR,OVERDUE,SUPP009,EXT000119,Supplier 9 Inc.,9 Main St,Zurich,CH,Contact 9,555-1008,supplier9@example.com,39,9,12345686,ACTIVE,13000,50
+INV002,19/01/2025,16/02/2025,3918.35,GBP,PAID,SUPP015,EXT000125,Supplier 15 Inc.,15 Main St,Vienna,AT,Contact 15,555-1014,supplier15@example.com,45,15,12345692,INACTIVE,19000,80
+INV003,27/12/2024,22/02/2025,6754.92,USD,OVERDUE,SUPP015,EXT000125,Supplier 15 Inc.,15 Main St,Vienna,AT,Contact 15,555-1014,supplier15@example.com,45,15,12345692,INACTIVE,19000,80
+INV004,03/01/2025,25/01/2025,5040.22,USD,PAID,SUPP002,EXT000112,Supplier 2 Inc.,2 Main St,Paris,FR,Contact 2,555-1001,supplier2@example.com,32,2,12345679,INACTIVE,6000,15
+INV005,02/01/2025,26/01/2025,1623.23,USD,PAID,SUPP006,EXT000116,Supplier 6 Inc.,6 Main St,Rome,IT,Contact 6,555-1005,supplier6@example.com,36,6,12345683,INACTIVE,10000,35
+INV006,02/02/2025,03/03/2025,5324.45,GBP,PAID,SUPP006,EXT000116,Supplier 6 Inc.,6 Main St,Rome,IT,Contact 6,555-1005,supplier6@example.com,36,6,12345683,ACTIVE,10000,35
+INV007,25/01/2025,11/02/2025,5764.79,EUR,PAID,SUPP003,EXT000113,Supplier 3 Inc.,3 Main St,London,GB,Contact 3,555-1002,supplier3@example.com,33,3,12345680,INACTIVE,7000,20
+INV008,26/12/2024,09/01/2025,1466.28,USD,PAID,SUPP011,EXT000121,Supplier 11 Inc.,11 Main St,Stockholm,SE,Contact 11,555-1010,supplier11@example.com,41,11,12345688,INACTIVE,15000,60
+INV009,27/12/2024,23/02/2025,5102.21,EUR,PAID,SUPP008,EXT000118,Supplier 8 Inc.,8 Main St,Brussels,BE,Contact 8,555-1007,supplier8@example.com,38,8,12345685,INACTIVE,12000,45
